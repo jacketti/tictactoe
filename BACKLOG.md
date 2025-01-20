@@ -1,6 +1,10 @@
 US1:
 Game board creation
 
+US2:
+Player X won with a vertical line
+
+
 Create Backlog with 5 milestones:
 1 - Game Board creation
 Game Board Creation…

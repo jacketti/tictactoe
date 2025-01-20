@@ -10,7 +10,15 @@ class MainTest {
                 "-+-+-\n" +
                 "| |\n" +
                 "-+-+-\n" +
-                "| |", TicTacToe().toString())
+                "| |", board().toString())
+    }
+
+    @Test fun playerXCanWinWithAVerticalLine() {
+        // to big at this point
+    }
+
+    @Test fun theGameShouldStartWithPlayerX() {
+        assertEquals("The game will start with player X", TicTacToe().toString())
     }
 }
 
