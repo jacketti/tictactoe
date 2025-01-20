@@ -5,11 +5,11 @@ import kotlin.test.assertEquals
 
 class MainTest {
     @Test fun itShouldReturnABoard() {
-        assertEquals("| |\n" +
+        assertEquals(" | | \n" +
                 "-+-+-\n" +
-                "| |\n" +
+                " | | \n" +
                 "-+-+-\n" +
-                "| |", newBoard().toString())
+                " | | ", newBoard().toString())
     }
 
     @Test fun playerXCanWinWithAVerticalLine() {
@@ -34,6 +34,14 @@ class MainTest {
                 "| |\n" +
                 "-+-+-\n" +
                 "| |O", TicTacToe(2).toString())
+    }
+
+    @Test fun PlayerCanSelectCenterPosition() {
+        assertEquals(" | | \n" +
+                "-+-+-\n" +
+                " |X| \n" +
+                "-+-+-\n" +
+                " | | ", TicTacToe(5).toString())
     }
 
 }
