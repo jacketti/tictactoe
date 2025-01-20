@@ -1,6 +1,10 @@
 package me.ivmg.tictactoe
 
-fun main(args: Array<String>) {
-    
+fun TicTacToe(): String {
+    return "| |\n" +
+            "-+-+-\n" +
+            "| |\n" +
+            "-+-+-\n" +
+            "| |"
 }
 
