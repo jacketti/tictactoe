@@ -18,7 +18,15 @@ class MainTest {
     }
 
     @Test fun theGameShouldStartWithPlayerX() {
-        assertEquals("The game will start with player X", TicTacToe().toString())
+        assertEquals("The game will start with player X", TicTacToe(0).toString())
+    }
+
+    @Test fun playerXcanMakeAMove() {
+        assertEquals("X| |\n" +
+                "-+-+-\n" +
+                "| |\n" +
+                "-+-+-\n" +
+                "| |", TicTacToe(1).toString())
     }
 }
 

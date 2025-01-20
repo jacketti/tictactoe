@@ -1,22 +1,35 @@
 package me.ivmg.tictactoe
 
-fun TicTacToe(): String {
+fun TicTacToe(move: Int): String {
+    println("Game Board Creation…\n")
     var board = board()
     var currentPlayer = "X"
-    println("Game Board Creation…\n")
     println(board)
     println("Board Created.\n")
     println("The game will start with player $currentPlayer")
+
+    //make a move
+    if (move == 1) {
+        println("Player $currentPlayer made a move")
+        board = "X| |\n" +
+                "-+-+-\n" +
+                "| |\n" +
+                "-+-+-\n" +
+                "| |"
+        println(board)
+        currentPlayer = "O"
+        println("Current player is now $currentPlayer")
+        return board
+    }
     return "The game will start with player $currentPlayer"
 }
 
-public fun board(): String {
+fun board(): String {
     var board = "| |\n" +
             "-+-+-\n" +
             "| |\n" +
             "-+-+-\n" +
             "| |"
-    println(board)
     return board
 }
 
