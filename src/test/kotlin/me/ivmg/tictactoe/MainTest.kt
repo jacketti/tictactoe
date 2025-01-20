@@ -2,7 +2,6 @@ package me.ivmg.tictactoe
 
 import org.junit.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertTrue
 
 class MainTest {
     @Test fun itShouldReturnABoard() {
@@ -10,7 +9,7 @@ class MainTest {
                 "-+-+-\n" +
                 "| |\n" +
                 "-+-+-\n" +
-                "| |", board().toString())
+                "| |", newBoard().toString())
     }
 
     @Test fun playerXCanWinWithAVerticalLine() {

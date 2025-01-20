@@ -2,7 +2,7 @@ package me.ivmg.tictactoe
 
 fun TicTacToe(move: Int): String {
     println("Game Board Creation…\n")
-    var board = board()
+    var board = newBoard()
     var currentPlayer = "X"
     println(board)
     println("Board Created.\n")
@@ -24,7 +24,7 @@ fun TicTacToe(move: Int): String {
     return "The game will start with player $currentPlayer"
 }
 
-fun board(): String {
+fun newBoard(): String {
     var board = "| |\n" +
             "-+-+-\n" +
             "| |\n" +
