@@ -27,5 +27,14 @@ class MainTest {
                 "-+-+-\n" +
                 "| |", TicTacToe(1).toString())
     }
+
+    @Test fun PlayerOCanMakeAMove() {
+        assertEquals("X| |\n" +
+                "-+-+-\n" +
+                "| |\n" +
+                "-+-+-\n" +
+                "| |O", TicTacToe(2).toString())
+    }
+
 }
 

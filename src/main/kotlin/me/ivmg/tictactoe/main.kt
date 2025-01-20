@@ -21,6 +21,27 @@ fun TicTacToe(move: Int): String {
         println("Current player is now $currentPlayer")
         return board
     }
+    if (move == 2) {
+        println("Player $currentPlayer made a move")
+        board = "X| |\n" +
+                "-+-+-\n" +
+                "| |\n" +
+                "-+-+-\n" +
+                "| |"
+        println(board)
+        currentPlayer = "O"
+        println("Current player is now $currentPlayer")
+
+        println("Player $currentPlayer made a move")
+        board = "X| |\n" +
+                "-+-+-\n" +
+                "| |\n" +
+                "-+-+-\n" +
+                "| |O"
+        println(board)
+        currentPlayer = "X"
+        return board
+    }
     return "The game will start with player $currentPlayer"
 }
 
