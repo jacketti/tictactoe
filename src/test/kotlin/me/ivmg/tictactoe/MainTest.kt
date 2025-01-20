@@ -9,7 +9,7 @@ class MainTest {
                 "-+-+-\n" +
                 " | | \n" +
                 "-+-+-\n" +
-                " | | ", newBoard().toString())
+                " | | ", Board().newBoard().toString())
     }
 
     @Test fun playerXCanWinWithAVerticalLine() {
@@ -21,19 +21,19 @@ class MainTest {
     }
 
     @Test fun playerXcanMakeAMove() {
-        assertEquals("X| |\n" +
+        assertEquals("X| | \n" +
                 "-+-+-\n" +
-                "| |\n" +
+                " | | \n" +
                 "-+-+-\n" +
-                "| |", TicTacToe(1).toString())
+                " | | ", TicTacToe(1).toString())
     }
 
     @Test fun PlayerOCanMakeAMove() {
-        assertEquals("X| |\n" +
+        assertEquals("X| | \n" +
                 "-+-+-\n" +
-                "| |\n" +
+                " | | \n" +
                 "-+-+-\n" +
-                "| |O", TicTacToe(2).toString())
+                " | |O", TicTacToe(2).toString())
     }
 
     @Test fun PlayerCanSelectCenterPosition() {
