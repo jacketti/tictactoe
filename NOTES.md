@@ -7,4 +7,4 @@ Pomodoro 1:
 Pomodoro 2:
 - [X] Player X can select a specific cell
 - [X] Refactor making a move
-- [] Player X must win with a vertical line
+- [X] Player X must win with a vertical line

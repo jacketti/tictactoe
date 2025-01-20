@@ -9,7 +9,7 @@ var position7 = " "
 var position8 = " "
 var position9 = " "
 var startPlayer = "X"
-var currentPlayer = "O"
+var currentPlayer = ""
 
 fun TicTacToe(move: Int): String {
     println("Game Board Creation…\n")
@@ -17,23 +17,30 @@ fun TicTacToe(move: Int): String {
     println(board)
     println("Board Created.\n")
     println("The game will start with player $startPlayer")
-
+    currentPlayer = startPlayer
     //make a move
     if (move == 1) {
-        return makeAMove(board, move = 1, currentPlayer = startPlayer).toString()
+        return makeAMove(board, move = 1).toString()
     }
     if (move == 2) {
-        makeAMove(board, move = 1, currentPlayer = startPlayer).toString()
-        return makeAMove(board, move = 9, currentPlayer = currentPlayer).toString()
+        makeAMove(board, move = 1).toString()
+        return makeAMove(board, move = 9).toString()
+    }
+    if (move == 3) {
+        println("Quick way to win with vertical line")
+        makeAMove(board, move = 1).toString()
+        makeAMove(board, move = 9).toString()
+        makeAMove(board, move = 4).toString()
+        makeAMove(board, move = 5).toString()
+        return makeAMove(board, move = 7).toString()
     }
     if (move == 5) {
-        return makeAMove(board, move = 5, currentPlayer = startPlayer).toString()
+        return makeAMove(board, move = 5).toString()
     }
     return "The game will start with player $startPlayer"
 }
 
-fun makeAMove(board: String, move: Int, currentPlayer: String): String {
-    var currentPlayer = currentPlayer
+fun makeAMove(board: String, move: Int): String {
     var board: String = board.toString()
 
     println("Player $currentPlayer made a move")
@@ -66,7 +73,7 @@ fun makeAMove(board: String, move: Int, currentPlayer: String): String {
     println(board)
     if (currentPlayer == "X") {
         currentPlayer = "O"
-    } else {
+    } else if (currentPlayer == "O") {
         currentPlayer = "X"
     }
     println("Current player is now $currentPlayer")

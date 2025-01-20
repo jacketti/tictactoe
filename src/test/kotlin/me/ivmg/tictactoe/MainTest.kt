@@ -13,7 +13,11 @@ class MainTest {
     }
 
     @Test fun playerXCanWinWithAVerticalLine() {
-        // to big at this point
+        assertEquals("X| | \n" +
+                "-+-+-\n" +
+                "X|O| \n" +
+                "-+-+-\n" +
+                "X| |O", TicTacToe(3).toString())
     }
 
     @Test fun theGameShouldStartWithPlayerX() {
@@ -43,6 +47,5 @@ class MainTest {
                 "-+-+-\n" +
                 " | | ", TicTacToe(5).toString())
     }
-
 }
 
